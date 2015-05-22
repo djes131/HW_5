@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Форма</title>
+	<style>
+	#form{
+		width: 500px;
+		margin: 50px auto;
+	}
+	#login{
+		padding-left: 10px;
+	}
+		p{
+			font-size: 14pt;
+		}
+	</style>
+</head>
+<body>
+	<form action="form.php" name="first" method="post" enctype="multipart/form-data">
+		<fieldset id="form">
+		 <legend>Работа с формой</legend>
+			<label id="login">Логин:</label>
+			<input type="text" id="inputlogin" name="login"/><br/><br/>
+			<label id="password">Пароль:</label>
+			<input type="password" name="password" /><br/><br/>
+			<select name="city">
+				<option value="No city">Выбор города</option>
+				<option value="Kharkov">Харьков</option>
+				<option value="Kiev">Киев</option>
+				<option value="Lvov">Львов</option>
+				<option value="Винница">Винница</option>
+				<option value="Ужгород">Ужгород</option>
+			</select>
+			<p>Вы согласны на обработку формы:</p>
+			<input type=radio name=answer value=yes checked>Да
+			<input type=radio name=answer value=no>Нет<br/><br/>
+			<input type="file" name="avatar"/>
+			<input type="submit" name="sendInfo" velue="Отправить"/>
+			<input type="reset" name="resend" velue="Очистить"/>
+		</fieldset>
+	</form>
+</body>
+</html>
